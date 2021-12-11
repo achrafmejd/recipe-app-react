@@ -34,10 +34,7 @@ const Receipts = () => {
                                 <div className="image">
                                     <img className="image" src={element.strMealThumb} alt="" />
                                 </div>
-                                {/* <h2 className="title">
-                                    
-                                    {element.strMeal}
-                                </h2> */}
+                                
                                 <table className="description">
                                     <tr>
                                         <td><FaStar /></td>
@@ -52,15 +49,7 @@ const Receipts = () => {
                                         <td>{element.strArea}</td>
                                     </tr>
                                 </table>
-                                {/* 
-                                <h3 className="title category">
-                                    <FaLayerGroup />&nbsp;
-                                    {element.strCategory}
-                                </h3>
-                                <h5 className="title country">
-                                    <FaFontAwesomeFlag />&nbsp;
-                                    {element.strArea}
-                                </h5> */}
+                                
                                 <a className="addWatchlist" href="#"><FaHeart className="icon"/></a>
                                 <a href="#" className="goto"><FaExternalLinkSquareAlt className="gotoIcon"/></a>
                             </div>

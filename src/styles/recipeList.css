@@ -1,0 +1,110 @@
+.recipeListContainer{
+/*     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(66,104,131,1) 43%, rgba(0,212,255,1) 100%);
+ */
+ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(66,104,131,1) 43%, rgba(0,212,255,1) 100%);
+
+}
+
+.container{
+    display: flex;
+    flex-flow: wrap row;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+}
+
+.item{
+    flex: 0 1 20%;
+    height: 330px;
+    margin-left: 4%;
+    margin-top: 5%;
+    background: wheat;
+    border-radius: 0 25px 0 25px;   
+    position: relative; 
+
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    margin: auto;
+    width: 90%;
+    height: 180px;
+    margin-top: 5%;
+    /* background-color: blue; */
+}
+
+.image img{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin: 5% 0 5% 0;
+    
+}
+
+.addWatchlist{
+    display: none;
+    position: absolute;
+    top: 8%;
+    left: 7%;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.item:hover  .addWatchlist{
+    display: block;
+}
+
+.item:hover .goto{
+    display: block;
+}
+
+.goto{
+    display: none;
+    position: absolute;
+    top: 8%;
+    right: 7%;
+}
+
+.gotoIcon{
+    color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.icon{
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+.icon:hover{
+    color: red;
+}
+
+.country{
+    width: 50%;
+    margin: auto;
+    padding: 2px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(37, 150, 190);
+    margin-top: 5px;
+}
+.category{
+    width: 80%;
+    margin: auto;
+    padding: 2px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(30, 100, 126);
+}
+
+.description{
+    width: 80%;
+    margin: auto;
+    margin-top: 2%!important;
+}
+

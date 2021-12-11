@@ -22,7 +22,7 @@ const Hero = () => {
 
                     <form action="">
                         <input type="text" placeholder='What are you looking for ?'/>
-                        <button>Search</button>
+                        <button className='styledButton'>Search</button>
                     </form>
                 </div>
                 

@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import Navbar from "../components/Navbar"
+import "../styles/recipeList.css";
+import { FaHeart, FaFontAwesomeFlag, FaLayerGroup, FaStar, FaExternalLinkSquareAlt} from 'react-icons/fa';
+
 
 const Receipts = () => {
     const [state, setState] = useState(false);
@@ -19,9 +23,9 @@ const Receipts = () => {
             })
     }, [])
 
-
     return ( 
-        <>
+        <div className="recipeListContainer">
+            <Navbar />
             <div className="container">
                 {   !state ? <p>Loading...</p> : 
                     data.map((element)=>{
@@ -30,15 +34,35 @@ const Receipts = () => {
                                 <div className="image">
                                     <img className="image" src={element.strMealThumb} alt="" />
                                 </div>
-                                <h2 className="title">
+                                {/* <h2 className="title">
+                                    
                                     {element.strMeal}
-                                </h2>
-                                <h3 className="title">
+                                </h2> */}
+                                <table className="description">
+                                    <tr>
+                                        <td><FaStar /></td>
+                                        <td>{element.strMeal}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><FaLayerGroup /></td>
+                                        <td>{element.strCategory}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><FaFontAwesomeFlag /></td>
+                                        <td>{element.strArea}</td>
+                                    </tr>
+                                </table>
+                                {/* 
+                                <h3 className="title category">
+                                    <FaLayerGroup />&nbsp;
                                     {element.strCategory}
                                 </h3>
-                                <h5 className="title">
+                                <h5 className="title country">
+                                    <FaFontAwesomeFlag />&nbsp;
                                     {element.strArea}
-                                </h5>
+                                </h5> */}
+                                <a className="addWatchlist" href="#"><FaHeart className="icon"/></a>
+                                <a href="#" className="goto"><FaExternalLinkSquareAlt className="gotoIcon"/></a>
                             </div>
                                                     
                         )
@@ -46,7 +70,7 @@ const Receipts = () => {
                 }
             
             </div>
-        </>
+        </div>
      );
 }
  

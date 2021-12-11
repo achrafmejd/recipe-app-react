@@ -1,12 +1,23 @@
+import '../styles/navbar.css';
 
 const Header = () => {
     return (
         <header>
-            <h1>LOGO</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recettes</a></li>
-            </ul>
+            <div className="navigation">
+                <div className="logo">
+                    <img src="/logo.png" width="40" height="40" alt="" />
+                    <p>Recipe App</p>                    
+                </div>
+
+                <div className="nav-pages">
+                    <ul>
+                        <li><a className='hoverLink' href="#">Home</a></li>
+                        <li><a className='hoverLink' href="#">Menu</a></li>
+                        <li><a className='hoverLink' href="#">Popular</a></li>
+                        <li><a className='hoverLink' href="#">My Watchlist</a></li>
+                    </ul>
+                </div>
+            </div>
 
         </header>
     );

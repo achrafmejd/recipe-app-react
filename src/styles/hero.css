@@ -1,0 +1,105 @@
+.hero{
+    background-image:url('../images/hero1.jpg');
+
+    height: 635px;
+    background-size: cover;
+
+    position: relative;
+    color: wheat;
+    
+}
+
+
+.left-div{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    
+    padding: 10px;
+    width: 600px;
+}
+
+.buttons{
+    margin-top: 5%; 
+    
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-around;  
+}
+
+.buttons a{
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.form-container{
+    padding: 5px;
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-container form input{
+    width: 450px;
+    padding: 5px;
+}
+
+.form-container form button{
+    min-width: 50px;
+    padding: 5px;
+}
+
+
+
+.nav-pages{
+    flex: 0 1 70%;
+
+    display: flex;
+}
+
+.nav-pages ul{
+    display: flex;
+    flex-basis: 100%;
+
+}
+
+.nav-pages ul li {
+    font-size: 15px;
+    min-width: fit-content;
+    vertical-align: middle;
+    padding: 1.5%;    
+}
+
+
+.desc{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text{
+    flex: 0 1 88%;
+}
+
+.styledButton{
+    background-color: rgb(37, 150, 190);
+}
+.styledButton:hover{
+    background-color: rgb(6, 90, 121);
+}
+
+.buttons a:nth-child(2):hover{
+}
+
+.hoverLink:hover{
+    
+    color: rgb(6, 90, 121);
+}

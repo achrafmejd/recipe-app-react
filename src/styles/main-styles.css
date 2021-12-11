@@ -1,33 +1,13 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Architects Daughter', cursive;
 }
+
 li{
     list-style-type: none;
 }
 
-/* Header Stylig */
-header{
-    display: flex;
-    font-size: 25px;
-    background-color:blanchedalmond;
-}
-h1{
-    padding: 5px;
-}
-header ul {
-    display: flex;
-}
-header ul li{
-    margin-left: 5px;
-    font-size: 25px;
-    padding: 19px;
-}
-header ul li a{
-    color: inherit;
-    text-decoration:none; 
-
-}
 
 .container{
     display: flex;

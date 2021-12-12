@@ -28,7 +28,7 @@ const Recipe = () => {
                     </div>
                     <div className="recipe-ingredients">
                         <h4>Ingredient</h4>
-                        {ingredients.map((e)=>{
+                        {ingredients.map((e, index, element)=>{
                             
                             return(
                                 <p className="ingredient">{product[e]}</p>

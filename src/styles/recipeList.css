@@ -117,8 +117,8 @@
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 0 70px 0 70px;
-    background-color: red;
-
+    background-color: wheat;
+    
     display: flex;
     flex-direction: row;
 }
@@ -150,9 +150,11 @@
 }
 
 .recipe-ingredients{
-    flex: 0 1 40%;
+    flex: 0 1 60%;
     height: 40%;
     padding: 15px;
+    width: 90%;
+    margin: auto;
 }
 
 .recipe-docs{
@@ -161,10 +163,11 @@
 }
 
 .ingredient{
-    border: 1px solid black;
     float: left;
-    padding: 2px;
+    padding: 3.5px;
     border-radius: 5px;
     margin-left: 5px;
     margin: 5px;
+    color: white;
+    background-color: rgb(37, 150, 190) ;
 }

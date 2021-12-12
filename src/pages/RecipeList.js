@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar"
 import "../styles/recipeList.css";
 import { FaHeart, FaFontAwesomeFlag, FaLayerGroup, FaStar, FaExternalLinkSquareAlt} from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 
-
-const Receipts = () => {
+const RecipeList = () => {
     const [state, setState] = useState(false);
     const [data, setData] = useState(null);
     useEffect(()=>{
@@ -51,7 +52,15 @@ const Receipts = () => {
                                 </table>
                                 
                                 <a className="addWatchlist" href="#"><FaHeart className="icon"/></a>
-                                <a href="#" className="goto"><FaExternalLinkSquareAlt className="gotoIcon"/></a>
+                                
+                                    <Link className="goto" to={{
+                                        pathname : '/recipe',
+                                        state: element
+                                    }}>
+                                        <FaExternalLinkSquareAlt className="gotoIcon"/>
+                                    </Link>
+                                
+                                {/* <a href="/recipe" className="goto"><FaExternalLinkSquareAlt className="gotoIcon"/></a> */}
                             </div>
                                                     
                         )
@@ -64,4 +73,4 @@ const Receipts = () => {
 }
  
 
-export default Receipts;
+export default RecipeList;

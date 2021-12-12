@@ -11,8 +11,8 @@ const Header = () => {
 
                 <div className="nav-pages">
                     <ul>
-                        <li><a className='hoverLink' href="#">Home</a></li>
-                        <li><a className='hoverLink' href="#">Menu</a></li>
+                        <li><a className='hoverLink' href="/">Home</a></li>
+                        <li><a className='hoverLink' href="/all-recipes">Menu</a></li>
                         <li><a className='hoverLink' href="#">Popular</a></li>
                         <li><a className='hoverLink' href="#">My Watchlist</a></li>
                     </ul>

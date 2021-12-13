@@ -2,7 +2,9 @@ import Navbar from "../components/Navbar";
 import {
     useLocation
   } from "react-router-dom";
-  import { useState , useEffect} from "react";
+import { useState , useEffect} from "react";
+
+import {FaYoutube} from 'react-icons/fa';
 
 const Recipe = () => {
     const [ingredients, setIngredient] = useState([]);
@@ -40,6 +42,7 @@ const Recipe = () => {
                     <h1>{product.strMeal}</h1>
                     <p>{product.strInstructions}</p>
                 </div>
+                <a className="goToWatch" href={product.strYoutube} target="_blank"><FaYoutube className="goToWatch-icon"/></a>
             </div>
         </div>
      );

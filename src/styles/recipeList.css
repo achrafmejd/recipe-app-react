@@ -121,6 +121,8 @@
     
     display: flex;
     flex-direction: row;
+
+    position: relative;
 }
 
 .recipe-meta{
@@ -170,4 +172,13 @@
     margin: 5px;
     color: white;
     background-color: rgb(37, 150, 190) ;
+}
+
+.goToWatch-icon{
+    width: 150px;
+    height: 150px;
+    color: red;
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
 }

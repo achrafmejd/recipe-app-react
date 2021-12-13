@@ -22,7 +22,7 @@ function App(){
                     <RecipeList />
                 </Route>
 
-                <Route path="/recipe" element={<Recipe />}>
+                <Route path="/recipe/:id" element={<Recipe />}>
                     <Recipe />
                 </Route>
             </Switch>

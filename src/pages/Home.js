@@ -1,9 +1,10 @@
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
+import Recommendation from "../components/Recommendation";
 const Home = () => {
     return ( 
         <>
             <Hero />
+            <Recommendation />
         </>
      );
 }

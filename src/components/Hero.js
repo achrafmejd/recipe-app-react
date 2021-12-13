@@ -29,8 +29,8 @@ const Hero = () => {
 
                 <div className="buttons">
                     <div className="buttons-container">
-                        <a className='styledButton' href="#">Menu</a>
-                        <a className='hoverLink' href="#">Watch our Menu</a>
+                        <a className='styledButton' href="/all-recipes">Menu</a>
+                        <a className='hoverLink' href="#">My Favourites Recipes</a>
                     </div>
                 </div>
             </div>

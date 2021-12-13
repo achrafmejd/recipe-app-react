@@ -1,13 +1,10 @@
+import "../styles/recom.css";
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar"
-import "../styles/recipeList.css";
 import { FaHeart, FaFontAwesomeFlag, FaLayerGroup, FaStar, FaExternalLinkSquareAlt} from 'react-icons/fa';
 import { Link } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom/cjs/react-router-dom.min";
 
-import Loader from '../components/Loader';
-
-const RecipeList = () => {
+const Recommendation = () => {
+    
     const [state, setState] = useState(false);
     const [data, setData] = useState(null);
     useEffect(()=>{
@@ -26,14 +23,20 @@ const RecipeList = () => {
             })
     }, [])
 
-
+    const addWatchList = (e)=>{
+        /* const heart = document.getElementById('heart');
+        heart.style.color = 'red'; */
+        document.getElementById('heart').style.color = 'red';
+/*         alert(a);
+ */
+    }
     return ( 
-        <div className="recipeListContainer">
-            <Navbar />
-            <div className="container">
-                
-                {   !state ? <Loader /> : 
-                    data.map((element)=>{
+        <div>
+            <section className="recomm">
+                <h1 className="recom-title">OUR RECOMMENDATION</h1>
+                <div className="container">
+                {   !state ? <p>Loading...</p> : 
+                    data.slice(0,4).map((element)=>{
                         return (
                             <div className="item">
                                 <div className="image">
@@ -55,7 +58,7 @@ const RecipeList = () => {
                                     </tr>
                                 </table>
                                 
-                                <a className="addWatchlist" href="#"><FaHeart id="heart" className="icon"/></a>
+                                <a className="addWatchlist" href="#/" onClick={(e)=>addWatchList(e)}><FaHeart key={element.idMeal} id="heart" className="icon"/></a>
                                 
                                     <Link className="goto" to={{
                                         pathname : '/recipe/'+element.idMeal,
@@ -71,9 +74,9 @@ const RecipeList = () => {
                 }
             
             </div>
+            </section>
         </div>
      );
 }
  
-
-export default RecipeList;
+export default Recommendation;

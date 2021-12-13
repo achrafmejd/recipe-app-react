@@ -2,8 +2,8 @@ import '../styles/navbar.css';
 
 const Header = () => {
     return (
-        <header>
-            <div className="navigation">
+        <header id="mynav">
+            <div  className="navigation">
                 <div className="logo">
                     <img src="/logo.png" width="40" height="40" alt="" />
                     <p>Recipe App</p>                    

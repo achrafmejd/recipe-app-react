@@ -1,0 +1,12 @@
+.recomm{
+    width: 90%;
+    
+    margin: auto;
+    padding: 20px;
+}
+
+.recom-title{
+    text-align: center;
+    padding: 15px;
+    color: wheat;
+}

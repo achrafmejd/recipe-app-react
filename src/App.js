@@ -5,6 +5,7 @@ import RecipeList from "./pages/RecipeList";
 import Home from "./pages/Home";
 import Recipe from "./pages/Recipe";
 import { BrowserRouter as Router, Route , Switch} from "react-router-dom";
+import FavList from "./pages/FavList";
 
 
 
@@ -24,6 +25,9 @@ function App(){
 
                 <Route path="/recipe/:id" element={<Recipe />}>
                     <Recipe />
+                </Route>
+                <Route path="/favourites" element={<Recipe />}>
+                    <FavList />
                 </Route>
             </Switch>
         </Router>

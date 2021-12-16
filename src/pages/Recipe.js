@@ -10,13 +10,17 @@ const Recipe = () => {
     const [ingredients, setIngredient] = useState([]);
 
     const [product, setProduct]=useState({});
+
+    
 	const location = useLocation();
+    
 	useEffect(()=>{
-		setProduct(location.state);
+        setProduct(location.state);
         for(let i=1;i<=20;i++){
             setIngredient( ingredients => [...ingredients, 'strIngredient'+i]);
         }
 	}, [])
+    console.log(location.state);
 
 
     return ( 

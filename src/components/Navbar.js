@@ -14,7 +14,7 @@ const Header = () => {
                         <li><a className='hoverLink' href="/">Home</a></li>
                         <li><a className='hoverLink' href="/all-recipes">Menu</a></li>
                         <li><a className='hoverLink' href="#">Popular</a></li>
-                        <li><a className='hoverLink' href="#">My Watchlist</a></li>
+                        <li><a className='hoverLink' href="/favourites">My Watchlist</a></li>
                     </ul>
                 </div>
             </div>

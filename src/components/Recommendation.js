@@ -2,6 +2,7 @@ import "../styles/recom.css";
 import { useEffect, useState } from "react";
 import { FaHeart, FaFontAwesomeFlag, FaLayerGroup, FaStar, FaExternalLinkSquareAlt} from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 const Recommendation = () => {
     
@@ -35,7 +36,7 @@ const Recommendation = () => {
             <section className="recomm">
                 <h1 className="recom-title">OUR RECOMMENDATION</h1>
                 <div className="container">
-                {   !state ? <p>Loading...</p> : 
+                {   !state ? <p>Loading...</p>: 
                     data.slice(0,4).map((element)=>{
                         return (
                             <div className="item">

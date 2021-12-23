@@ -8,7 +8,10 @@ import Loader from '../components/Loader';
 const RecipeList = () => {
     const [state, setState] = useState(false);
     const [data, setData] = useState(null);
-    const [myFav, setMyFav] = useState( localStorage.getItem("myFavs") || []);
+    // In this line below i initialise the myFav array that contains the favourites recipes
+    // In the first time, it gonna be an empty array
+    // If something is in the array we get the values from localstorage
+    const [myFav, setMyFav] = useState(JSON.parse(localStorage.getItem("myFavs")) || [] );
 
     const [heartState, setHeartState] = useState({
         color : 'white'
@@ -23,7 +26,7 @@ const RecipeList = () => {
             })
             .then((result)=>{
                     setData(result.meals);
-                    console.log(result);
+                    //console.log(result);
                     setState(true);
             })
             .catch((e)=>{
@@ -32,14 +35,17 @@ const RecipeList = () => {
     }, [])
     
     useEffect(()=>{
+        
         localStorage.setItem("myFavs", JSON.stringify(myFav));
     }, [myFav])
 
     function add(item) {
-        console.log(item);
-        setMyFav([...myFav, JSON.stringify(item)]);
 
-        
+
+        console.log(myFav);
+    
+        /* setMyFav([...myFav, JSON.stringify(item)]); */
+        setMyFav([...myFav, JSON.stringify(item)]);        
         if(heartState.color === 'white'){
             // If the item is never selected
             // Turn the heart to red and display it as a block
